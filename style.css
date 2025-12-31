@@ -77,10 +77,20 @@ section h2 {
 
 /* ===== PROJECTS ===== */
 .projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
+    margin-bottom: 50px;
 }
+
+.project-row {
+    display: flex;
+    gap: 25px;
+    justify-content: space-between;
+}
+
+.project-row .card {
+    flex: 1;
+    min-width: 280px;
+}
+
 
 .card {
     background: rgba(255, 255, 255, 0.06);
@@ -160,6 +170,12 @@ footer {
     header h1 {
         font-size: 2.2rem;
     }
+@media (max-width: 900px) {
+    .project-row {
+        flex-direction: column;
+    }
+}
+
 
     section h2 {
         font-size: 1.5rem;
